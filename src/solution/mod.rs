@@ -3,6 +3,7 @@ pub mod p0002_add_two_numbers;
 pub mod p0011_container_with_most_water;
 pub mod p0017_letter_combinations_of_a_phone_number;
 pub mod p0020_valid_parentheses;
+pub mod p0027_remove_element;
 pub mod p0049_group_anagrams;
 pub mod p0155_min_stack;
 pub mod p0173_binary_search_tree_iterator;
