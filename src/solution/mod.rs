@@ -1,8 +1,10 @@
 pub mod p0001_two_sum;
 pub mod p0002_add_two_numbers;
+pub mod p0009_palindrome_number;
 pub mod p0011_container_with_most_water;
 pub mod p0017_letter_combinations_of_a_phone_number;
 pub mod p0020_valid_parentheses;
+pub mod p0021_merge_two_sorted_lists;
 pub mod p0027_remove_element;
 pub mod p0035_search_insert_position;
 pub mod p0049_group_anagrams;
