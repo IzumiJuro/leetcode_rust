@@ -12,6 +12,7 @@ pub mod p0027_remove_element;
 pub mod p0035_search_insert_position;
 pub mod p0039_combination_sum1;
 pub mod p0040_combination_sum2;
+pub mod p0048_retate_image;
 pub mod p0049_group_anagrams;
 pub mod p0155_min_stack;
 pub mod p0173_binary_search_tree_iterator;
