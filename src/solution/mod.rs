@@ -26,3 +26,4 @@ pub mod p0283_move_zeroes;
 pub mod p0367_valid_perfect_square;
 pub mod p0704_binary_search;
 pub mod p0844_backspace_string_compare;
+pub mod p0977_squares_of_a_sorted_array;
