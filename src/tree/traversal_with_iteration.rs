@@ -80,7 +80,7 @@ pub fn levelorder_traversal_v1(root: T) -> Vec<Vec<i32>> {
         for _ in 0..queue.len() {
             if let Some(node) = queue.pop_front().unwrap() {
                 let borrow = node.borrow();
-                temp.push(borrow.val);  
+                temp.push(borrow.val);
                 if borrow.left.clone().is_some() {
                     queue.push_back(borrow.left.clone());
                 }
@@ -119,4 +119,36 @@ pub fn levelorder_traversal_v2(root: T) -> Vec<Vec<i32>> {
         res.push(temp)
     }
     res
+}
+
+pub fn levelorder_traversal_v3(root: T) -> Vec<Vec<i32>> {
+    let mut temp = if let Some(node) = root {
+        vec![node]
+    } else {
+        vec![]
+    };
+    let mut res = vec![];
+    while !temp.is_empty() {
+        res.push(temp.iter().map(|n| n.borrow().val).collect());
+        temp = temp
+            .iter()
+            .flat_map(|n| vec![n.borrow().left.clone(), n.borrow().right.clone()])
+            .flatten()
+            .collect();
+    }
+    res
+}
+
+#[cfg(test)]
+mod test {
+    use crate::tree;
+    use crate::utils::tree::to_tree;
+    #[test]
+    fn test() {
+        let vec = vec![vec![3], vec![9, 20], vec![15, 7]];
+        assert_eq!(
+            super::levelorder_traversal_v3(tree![3, 9, 20, null, null, 15, 7]),
+            vec
+        )
+    }
 }
