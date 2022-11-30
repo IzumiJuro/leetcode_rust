@@ -67,7 +67,7 @@ fn postorder_traversal(root: T) -> Vec<i32> {
     res
 }
 
-pub fn levelorder_traversal_v1(root: T) -> Vec<Vec<i32>> {
+pub fn level_order_traversal_v1(root: T) -> Vec<Vec<i32>> {
     use std::collections::VecDeque;
 
     let mut res = vec![];
@@ -94,7 +94,7 @@ pub fn levelorder_traversal_v1(root: T) -> Vec<Vec<i32>> {
     res
 }
 
-pub fn levelorder_traversal_v2(root: T) -> Vec<Vec<i32>> {
+pub fn level_order_traversal_v2(root: T) -> Vec<Vec<i32>> {
     use std::collections::VecDeque;
 
     let mut res = vec![];
@@ -121,7 +121,7 @@ pub fn levelorder_traversal_v2(root: T) -> Vec<Vec<i32>> {
     res
 }
 
-pub fn levelorder_traversal_v3(root: T) -> Vec<Vec<i32>> {
+pub fn level_order_traversal_v3(root: T) -> Vec<Vec<i32>> {
     let mut temp = if let Some(node) = root {
         vec![node]
     } else {
@@ -147,7 +147,7 @@ mod test {
     fn test() {
         let vec = vec![vec![3], vec![9, 20], vec![15, 7]];
         assert_eq!(
-            super::levelorder_traversal_v3(tree![3, 9, 20, null, null, 15, 7]),
+            super::level_order_traversal_v3(tree![3, 9, 20, null, null, 15, 7]),
             vec
         )
     }
