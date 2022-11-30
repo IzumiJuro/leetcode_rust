@@ -1,7 +1,6 @@
 use crate::utils::tree::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
-use std::vec;
 
 struct Solution;
 type T = Option<Rc<RefCell<TreeNode>>>;
