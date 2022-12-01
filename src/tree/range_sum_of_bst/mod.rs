@@ -3,10 +3,10 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 struct Solution;
+type T = Option<Rc<RefCell<TreeNode>>>;
 
-type T = Rc<RefCell<TreeNode>>;
 impl Solution {
-    pub fn range_sum_bst(root: Option<T>, low: i32, high: i32) -> i32 {
+    pub fn range_sum_bst(root: T, low: i32, high: i32) -> i32 {
         let mut stack = vec![root];
         let mut res = 0;
 

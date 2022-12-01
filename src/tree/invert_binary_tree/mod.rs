@@ -4,10 +4,10 @@ use std::rc::Rc;
 
 struct Solution;
 
-type T = Rc<RefCell<TreeNode>>;
+type T = Option<Rc<RefCell<TreeNode>>>;
 impl Solution {
-    pub fn invert_tree(root: Option<T>) -> Option<T> {
-        if let Some(node) = &root {
+    pub fn invert_tree(root: T) -> T {
+        if let Some(node) = root.as_ref() {
             let mut borrow = node.borrow_mut();
             let (left, right) = (
                 Self::invert_tree(borrow.left.clone()),

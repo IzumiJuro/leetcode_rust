@@ -1,5 +1,5 @@
-use std::{cell::RefCell, rc::Rc};
 use crate::utils::tree::TreeNode;
+use std::{cell::RefCell, rc::Rc};
 
 struct Solution;
 type T = Rc<RefCell<TreeNode>>;
@@ -22,16 +22,16 @@ impl Solution {
 
 #[cfg(test)]
 mod test {
-    use crate::utils::tree::to_tree;
     use crate::tree;
+    use crate::utils::tree::to_tree;
 
     use super::*;
 
     #[test]
     fn postorder_test() {
         assert_eq!(
-            Solution::postorder_traversal(tree!([1,null,2,3])),
-            vec![3,2,1]
+            Solution::postorder_traversal(tree!([1, null, 2, 3])),
+            vec![3, 2, 1]
         )
     }
 }

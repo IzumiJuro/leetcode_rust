@@ -3,14 +3,13 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 struct Solution;
-
-type T = Rc<RefCell<TreeNode>>;
+type T = Option<Rc<RefCell<TreeNode>>>;
 
 impl Solution {
-    pub fn sorted_array_to_bst(nums: Vec<i32>) -> Option<T> {
+    pub fn sorted_array_to_bst(nums: Vec<i32>) -> T {
         Self::sorted_slice_to_bst(&nums)
     }
-    pub fn sorted_slice_to_bst(nums: &[i32]) -> Option<T> {
+    pub fn sorted_slice_to_bst(nums: &[i32]) -> T {
         if nums.is_empty() {
             return None;
         }
